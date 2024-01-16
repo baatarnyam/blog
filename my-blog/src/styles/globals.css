@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.workSansText {
+  font-family: var(--font-work-sans);
+}
+.serifText {
+  font-family: var(--font-serif);
+}
+.jakartaText {
+  font-family: var(--font-Jakarta);
+}

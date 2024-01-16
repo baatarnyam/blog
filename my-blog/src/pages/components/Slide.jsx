@@ -15,13 +15,13 @@ const Slide = () => {
         </button>
       </div>
       <div className="md:w-[598px] md:h-[252px] absolute left-2 bottom-[60px] rounded-[12px] p-[40px] flex flex-col justify-between bg-white border">
-        <button className="w-[97px] h-[28px] rounded-[6px] flex items-center justify-center bg-blue-500 text-white text-[14px] font-medium">
-          Technolgy
+        <button className="workSansText  w-[97px] h-[28px] rounded-[6px] flex items-center justify-center bg-blue-500 text-white text-[14px] font-medium">
+          Technology
         </button>
-        <div className="w-[518px] h-[80px] text-4xl font-semibold text-gray-950">
+        <div className="workSansText w-[518px] h-[80px] text-4xl font-semibold text-gray-950">
           Grid system for better Design User Interface
         </div>
-        <div className="w-[126px] h-[24px] text-base font-normal text-gray-400">
+        <div className="workSansText w-[126px] h-[24px] text-base font-normal text-gray-400">
           August 20, 2022
         </div>
       </div>

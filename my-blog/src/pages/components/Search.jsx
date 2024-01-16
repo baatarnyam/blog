@@ -2,9 +2,9 @@ import { CiSearch } from "react-icons/ci";
 
 const Search = () => {
   return (
-    <div className="md:w-[166px] md:h-[36px] md:flex gap-[10px] items-center rounded-[5px] pl-[16px] pr-[4px] bg-gray-100">
+    <div className="md:w-[166px] md:h-[36px] flex gap-[10px] items-center justify-between rounded-[5px] md:pl-[16px] md:pr-[4px] bg-gray-100 w-[300px] h-[30px]">
       <input
-        className="w-[114px] h-[20px] text-[14px] text-gray-500 bg-gray-100 font-normal border-none"
+        className="md:w-[114px] md:h-[20px] text-[14px] text-gray-500 bg-gray-100 font-normal border-none w-[250px] h-[15px]"
         type="text"
         placeholder="Search"
         style={{ border: "none" }}

@@ -3,6 +3,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Search from "./Search";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const MenuClicked = () => {
   const headerArray = ["Home", "Blog", "Contact"];
@@ -11,12 +12,7 @@ const MenuClicked = () => {
     setMenuClicked((previousState) => !previousState);
   };
   return (
-    <motion.div
-      initial={{ x: "100%" }}
-      animate={{ x: "0" }}
-      exit={{ x: "150%", duration: 1 }}
-      className=""
-    >
+    <div>
       <button onClick={handleMenuClicked}>
         {menuClicked ? (
           <IoCloseCircleOutline size={32} />
@@ -25,23 +21,28 @@ const MenuClicked = () => {
         )}
       </button>
       {menuClicked && (
-        <div className="">
-          <div className="w-[380px] h-300px flex flex-col items-center border">
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: "-96%" }}
+          exit={{ x: "150%", duration: 1 }}
+          className="w-[350px] h-[200px] flex flex-col items-center justify-between mt-[20px] bg-gray-50 rounded-[10px] fixed z-10"
+        >
+          <div className="w-[130px] flex flex-col items-center">
             {headerArray.map((items, index) => (
-              <a
-                src=""
+              <Link
+                href={`//${items === "Home" ? "/" : items}`}
                 key={index}
-                className="flex flex-col text-base font-normal text-gray-800"
+                className="w-full h-[50px] flex flex-col gap-[10px] items-center justify-center text-[20px] font-normal text-gray-800"
               >
                 {items}
-              </a>
+              </Link>
               //   <div className="text-base font-normal text-gray-800">{item}</div>
             ))}
           </div>
           <Search />
-        </div>
+        </motion.div>
       )}
-    </motion.div>
+    </div>
   );
 };
 export default MenuClicked;
