@@ -21,7 +21,7 @@ const Header = ({ children }) => {
             <div className="md:w-[667px] md:h-[36px] md:flex md:gap-[40px] md:justify-center md:items-center">
               {headerArray.map((items, index) => (
                 <Link
-                  href={`//${items === "Home" ? "/" : items}`}
+                  href={`/${items === "Home" ? "/" : items}`}
                   key={index}
                   className="workSansText text-base font-normal text-gray-800"
                 >

@@ -25,12 +25,12 @@ const MenuClicked = () => {
           initial={{ x: "100%" }}
           animate={{ x: "-96%" }}
           exit={{ x: "150%", duration: 1 }}
-          className="w-[350px] h-[200px] flex flex-col items-center justify-between mt-[20px] bg-gray-50 rounded-[10px] fixed z-10"
+          className="w-[350px] h-[200px] flex flex-col items-center justify-between bg-gray-50 rounded-[10px] fixed z-10"
         >
           <div className="w-[130px] flex flex-col items-center">
             {headerArray.map((items, index) => (
               <Link
-                href={`//${items === "Home" ? "/" : items}`}
+                href={`/${items === "Home" ? "/" : items}`}
                 key={index}
                 className="w-full h-[50px] flex flex-col gap-[10px] items-center justify-center text-[20px] font-normal text-gray-800"
               >
