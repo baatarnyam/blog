@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="md:w-[643px] md:h-[440px] rounded-[10px] bg-gray-100 md:py-[30px] md:pl-[30px] w-[360px] h-fit pt-[10px] pl-[10px] ">
-          <div className="md:w-[478px] md:h-[385px] flex flex-col justify-between w-[380px] h-fit ">
+          <div className="md:w-[478px] md:h-[385px] flex flex-col justify-between w-[360px] h-fit ">
             <div className="w-fit h-fit text-lg font-semibold">
               Leave a Message
             </div>
