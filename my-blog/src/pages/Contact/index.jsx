@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const Contact = () => {
   return (
     <div className="flex flex-col items-center">
-      <div className="md:w-[895px] md:h-[895px] flex flex-col items-center md:mt-[50px] md:mb-[100px] w-[390px] h-fit mb-[30px]">
+      <div className="md:w-[895px] md:h-[895px] flex flex-col items-center md:mt-[50px] w-[390px] h-fit mb-[30px] gap-[20px]">
         <div className="md:w-[769px] md:h-[389px] flex flex-col items-center justify-center gap-[60px] w-[380px] h-fit">
           <div className="md:w-[624px] md:h-[163px] flex flex-col justify-between w-[320px] h-fit gap-[15px] ">
             <div className="md:w-[196px] md:h-[40px] flex items-end md:text-[36px] font-semibold text-black text-[26px] ">
@@ -37,7 +37,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-[643px] md:h-[440px] rounded-[10px] bg-gray-100 md:py-[30px] md:pl-[30px] w-[390px] h-fit pt-[10px] pl-[10px] ">
+        <div className="md:w-[643px] md:h-[440px] rounded-[10px] bg-gray-100 md:py-[30px] md:pl-[30px] w-[360px] h-fit pt-[10px] pl-[10px] ">
           <div className="md:w-[478px] md:h-[385px] flex flex-col justify-between w-[380px] h-fit ">
             <div className="w-fit h-fit text-lg font-semibold">
               Leave a Message

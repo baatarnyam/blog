@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Header from "./components/Header";
 import Slide from "./components/Slide";
 import Trending from "./components/Trending";
 import AllBlog from "./components/AllBlog";

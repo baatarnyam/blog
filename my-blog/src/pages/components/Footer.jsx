@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="md:w-[1600px] md:h-[495px] bg-gray-100 flex flex-col gap-[30px] md:pt-[64px] items-center w-[390px] h-[220px] md:py-[30px]">
+    <div className="md:w-[1600px] md:h-[495px] bg-gray-100 flex flex-col gap-[30px] md:pt-[64px] items-center w-[390px] h-[220px] md:py-[30px] md:mt-[60px]">
       <div className="md:w-[1220px] md:h-[236px] md:flex md:gap-[20px]">
         <div className="md:w-[290px] md:h-full md:flex md:flex-col md:gap-[20px] hidden flex-col">
           <div className="jakartaText text-[18px] font-semibold text-gray-950">
@@ -47,11 +47,11 @@ const Footer = () => {
       <div className="md:w-[1220px] md:h-[95px] flex items-center gap-[64px]">
         <div className="w-[230px] h-[54px] flex justify-between">
           <div>
-            <Image src="/footerLogo.png" width={48} height={48} />
+            <Image src="/footerLogo.png" width={48} height={48} alt="" />
           </div>
           <div className="md:w-[165px] md:h-[54px] flex flex-col justify-between ">
             <div>
-              <Image src="/MetaBlog.png" width={94} height={28} />
+              <Image src="/MetaBlog.png" width={94} height={28} alt="" />
             </div>
             <p className="jakartaText text-base md:w-[165px] md:h-[24px] text-gray-600">
               © All Rights Reserved.

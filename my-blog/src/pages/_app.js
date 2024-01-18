@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
       className={`${WorkSans.variable} ${asd.variable} ${PlusJakarta.variable}`}
     >
       <Header>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Header>
     </main>
   );

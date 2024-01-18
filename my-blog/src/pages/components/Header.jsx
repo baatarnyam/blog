@@ -15,6 +15,7 @@ const Header = ({ children }) => {
               width={135}
               height={26}
               className="md:w-[158px] md:h-[36px]"
+              alt=""
             />
           </div>
           <div className="md:w-[854px] md:h-[36] md:flex gap-[21px] hidden ">

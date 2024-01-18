@@ -1,74 +1,37 @@
 import Image from "next/image";
+import useSWR from "swr";
 
 const Trending = () => {
-  const array = [
-    {
-      img: (
-        <Image
-          src="/tranding1.png"
-          width={289}
-          height={320}
-          className="rounded-[12px] w-full h-full"
-        />
-      ),
-      title: "Technology",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      img: (
-        <Image
-          src="/tranding2.png"
-          width={289}
-          height={320}
-          className="rounded-[12px] w-full h-full"
-        />
-      ),
-      title: "Technology",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      img: (
-        <Image
-          src="/tranding3.png"
-          width={289}
-          height={320}
-          className="rounded-[12px] w-full h-full"
-        />
-      ),
-      title: "Technology",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-    {
-      img: (
-        <Image
-          src="/tranding4.png"
-          width={289}
-          height={320}
-          className="rounded-[12px] w-full h-full"
-        />
-      ),
-      title: "Technology",
-      text: "The Impact of Technology on the Workplace: How Technology is Changing",
-    },
-  ];
+  const { data, error } = useSWR("https://dev.to/api/articles", (args) =>
+    fetch(args).then((res) => res.json())
+  );
+  console.log(data);
   return (
     <div className="md:w-[1220px] md:h-[380px] flex flex-col relative w-[390px] h-fit gap-[40px]">
       <div className="workSansText w-[184px] h-[28px] text-[24px] md:flex md:items-start font-bold">
         Trending
       </div>
-      <div className="md:w-full md:h-[320px] md:flex md:justify-between w-full h-fit gap-[20px]">
-        {array.map(({ img, title, text }, index) => (
-          <div>
-            <div className="md:w-[290px] md:h-[320px] w-[350px] h-[250px]">
-              <div className="w-[230px] h-[120px] flex flex-col justify-between absolute md:top-[220px] md:ml-[40px]  ml-[40px]">
+      <div className="md:w-full md:h-[320px] md:flex-row md:justify-between w-full h-fit md:gap-[20px] flex flex-col gap-[30px] border">
+        {data?.slice(0, 4).map((el, index) => (
+          <div key={index} className="flex justify-center">
+            <div className="w-[290px] h-[320px]">
+              <div className="w-[250px] h-[140px] flex flex-col justify-between absolute top-[240px] ml-[20px] bg-black/50 rounded-[6px] overflow-hidden p-[10px]">
                 <div className="workSansText w-[97px] h-[28px] rounded-[6px] flex items-center justify-center bg-blue-500 text-white text-[14px] font-medium">
-                  {title}
+                  {el.tag_list.slice(3)}
                 </div>
-                <div className="workSansText w-[230px] h-[76px] text-lg text-gray-100">
-                  {text}
+                <div className="workSansText w-[230px] h-[76px] text-lg text-white">
+                  {el.description}
                 </div>
               </div>
-              {img}
+              <div>
+                <Image
+                  src={el.social_image}
+                  width={290}
+                  height={320}
+                  className="rounded-[12px] w-[290px] h-[320px]"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         ))}
