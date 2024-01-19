@@ -19,7 +19,9 @@ const Slide = () => {
   return (
     <div className="md:w-[1216px] md:h-[651px] md:flex flex-col justify-between items-end relative hidden">
       {!data ? (
-        <div>Loading...</div>
+        <div className="mr-[45%] w-[140px] h-[50px] rounded-[5px] bg-blue-600 flex items-center justify-center text-[20px] text-white font-bold">
+          Loading...
+        </div>
       ) : (
         <>
           <div className="md:w-full md:h-[600px]">
