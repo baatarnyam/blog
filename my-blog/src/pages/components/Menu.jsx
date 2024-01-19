@@ -36,7 +36,6 @@ const MenuClicked = () => {
               >
                 {items}
               </Link>
-              //   <div className="text-base font-normal text-gray-800">{item}</div>
             ))}
           </div>
           <Search />

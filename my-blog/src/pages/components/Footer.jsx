@@ -3,8 +3,10 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
+  const headerArray = ["Home", "Blog", "Contact"];
   return (
     <div className="md:w-[1600px] md:h-[495px] bg-gray-100 flex flex-col gap-[30px] md:pt-[64px] items-center w-[390px] h-[220px] md:py-[30px] md:mt-[60px]">
       <div className="md:w-[1220px] md:h-[236px] md:flex md:gap-[20px]">
@@ -31,9 +33,15 @@ const Footer = () => {
         <div className="md:flex md:flex-row md:items-start gap-[20px] flex flex-col items-center justify-between">
           <div className="md:w-[520px] md:h-[88px] md:flex md:justify-center">
             <div className="md:w-[63px] md:h-full flex flex-col gap-[8px]">
-              <p className="text-base font-normal text-gray-600">Home</p>
-              <p className="text-base font-normal text-gray-600">Blog</p>
-              <p className="text-base font-normal text-gray-600">Contact</p>
+              {headerArray.map((items, index) => (
+                <Link
+                  href={`/${items === "Home" ? "/" : items}`}
+                  key={index}
+                  className="workSansText text-base font-normal text-gray-800 active:scale-105"
+                >
+                  {items}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="w-[144px] h-[16px] flex justify-between ">

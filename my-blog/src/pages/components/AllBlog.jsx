@@ -3,6 +3,7 @@ import BlogCards from "./BlogCards";
 
 const AllBlog = () => {
   const [active, setActive] = useState("");
+
   const blogName = [
     "All",
     "Design",
@@ -13,7 +14,7 @@ const AllBlog = () => {
   ];
 
   return (
-    <div className="md:w-[1220px] md:h-[1585px] flex flex-col gap-[32px] w-[380px] h-fit">
+    <div className="md:w-[1220px]  flex flex-col gap-[32px] w-[380px h-fit">
       <div className="workSansText w-[184px] h-[28px] text-[24px] font-bold text-gray-950">
         All Blog Post
       </div>

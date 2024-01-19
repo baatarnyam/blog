@@ -6,7 +6,7 @@ import Link from "next/link";
 const Header = ({ children }) => {
   const headerArray = ["Home", "Blog", "Contact"];
   return (
-    <div className="border flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <div className="md:w-full md:h-[100px] md:flex md:justify-center w-[390px] h-[72px] flex items-center justify-between">
         <div className="md:w-[1130px] md:h-[36px] md:flex md:gap-[118px]">
           <div>
@@ -28,7 +28,6 @@ const Header = ({ children }) => {
                 >
                   {items}
                 </Link>
-                //   <div className="text-base font-normal text-gray-800">{item}</div>
               ))}
             </div>
             <Search />

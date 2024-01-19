@@ -11,7 +11,7 @@ const Trending = () => {
       <div className="workSansText w-[184px] h-[28px] text-[24px] md:flex md:items-start font-bold">
         Trending
       </div>
-      <div className="md:w-full md:h-[320px] md:flex-row md:justify-between w-full h-fit md:gap-[20px] flex flex-col gap-[30px] border">
+      <div className="md:w-full md:h-[320px] md:flex-row md:justify-between w-full h-fit md:gap-[20px] flex flex-col gap-[30px]">
         {data?.slice(0, 4).map((el, index) => (
           <div key={index} className="flex justify-center">
             <div className="w-[290px] h-[320px]">

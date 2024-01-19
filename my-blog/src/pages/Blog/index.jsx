@@ -5,6 +5,7 @@ const BlogCards = () => {
   const { data, error } = useSWR("https://dev.to/api/articles", (args) =>
     fetch(args).then((res) => res.json())
   );
+
   console.log(data);
   return (
     <div className="md:w-[1220px] md:h-fit flex flex-wrap gap-[20px] justify-center">

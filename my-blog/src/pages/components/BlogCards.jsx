@@ -1,14 +1,29 @@
 import Image from "next/image";
 import useSWR from "swr";
+import { useState } from "react";
+import Contact from "../Contact";
 
 const BlogCards = () => {
+  const [loadHandlerClick, setLoadHandlerClick] = useState(false);
+  const [count, setCount] = useState(9);
+
   const { data, error } = useSWR("https://dev.to/api/articles", (args) =>
     fetch(args).then((res) => res.json())
   );
-  console.log(data);
+  // console.log(data);
+  const loader = () => {
+    if (loadHandlerClick) {
+      setCount(count - 3);
+      setLoadHandlerClick(false);
+    } else {
+      setCount(count + 3);
+      setLoadHandlerClick(true);
+    }
+  };
+
   return (
     <div className="md:w-[1220px] md:h-fit flex flex-wrap gap-[20px] justify-center">
-      {data?.slice(0, 9).map((el, index) => (
+      {data?.slice(0, count).map((el, index) => (
         <div
           key={index}
           className="w-[380px] h-[476px] border rounded-[12px] p-[16px]"
@@ -36,8 +51,11 @@ const BlogCards = () => {
           </div>
         </div>
       ))}
-      <button className="w-[123px] h-[48px] rounded-[6px] flex items-center justify-center border md:mt-[40px]">
-        Load More
+      <button
+        className="w-[123px] h-[48px] rounded-[6px] flex items-center justify-center border md:mt-[40px] active:scale-105"
+        onClick={loader}
+      >
+        Load {loadHandlerClick ? "less" : "more"}
       </button>
     </div>
   );

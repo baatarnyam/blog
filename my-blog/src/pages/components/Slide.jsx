@@ -1,8 +1,6 @@
 import Image from "next/image";
 import useSWR from "swr";
-import { useState, useEffect } from "react";
-import { data } from "autoprefixer";
-import { axios } from "axios";
+import { useState } from "react";
 
 const Slide = () => {
   const { data, error } = useSWR("https://dev.to/api/articles", (arg) =>
@@ -21,7 +19,7 @@ const Slide = () => {
   return (
     <div className="md:w-[1216px] md:h-[651px] md:flex flex-col justify-between items-end relative hidden">
       {!data ? (
-        <div>Loading</div>
+        <div>Loading...</div>
       ) : (
         <>
           <div className="md:w-full md:h-[600px]">
