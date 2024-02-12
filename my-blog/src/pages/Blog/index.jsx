@@ -2,7 +2,7 @@ import Image from "next/image";
 import useSWR from "swr";
 
 const BlogCards = () => {
-  const { data, error } = useSWR("https://dev.to/api/articles", (args) =>
+  const { data, error } = useSWR("https://media.dev.to/api/articles", (args) =>
     fetch(args).then((res) => res.json())
   );
 

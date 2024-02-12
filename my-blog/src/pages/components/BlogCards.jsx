@@ -7,7 +7,7 @@ const BlogCards = () => {
   const [loadHandlerClick, setLoadHandlerClick] = useState(false);
   const [count, setCount] = useState(9);
 
-  const { data, error } = useSWR("https://dev.to/api/articles", (args) =>
+  const { data, error } = useSWR("https://media.dev.to/api/articles", (args) =>
     fetch(args).then((res) => res.json())
   );
   // console.log(data);
